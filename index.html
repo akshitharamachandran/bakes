@@ -11,7 +11,7 @@
 <meta property="og:description" content="Seven years of baking in the order it happened — 116 bakes from 2019 to 2026, one photograph each, with a recipe builder that asks what you want and writes it out.">
 <meta property="og:image" content="img/178-b-che-de-no-l.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8D%B0%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8D%93%3C/text%3E%3C/svg%3E">
 
 <style>
   :root { color-scheme: light dark; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
@@ -316,9 +316,18 @@ a{color:var(--berry-ink)}
   .echo { border-left-color: #999; }
 }
 
-/* the wordmark is a way home to the personal site */
+/* a way home to the personal site: an explicit pill, plus the wordmark itself */
 a.brand { text-decoration: none; color: inherit; }
 a.brand:hover b { color: var(--berry-ink); }
+.backhome {
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: .09em; text-transform: uppercase;
+  color: var(--ink-3); text-decoration: none; white-space: nowrap;
+  border: 1px solid var(--line-2); border-radius: 99px; padding: 5px 11px;
+  display: inline-flex; align-items: center; gap: 6px; flex: 0 0 auto;
+  transition: color .15s, border-color .15s;
+}
+.backhome:hover { color: var(--ink); border-color: var(--ink-3); }
+@media (max-width: 560px) { .backhome span { display: none; } .backhome { padding: 5px 9px; } }
 </style>
 </head>
 <body>
@@ -326,7 +335,7 @@ a.brand:hover b { color: var(--berry-ink); }
 
 <header class="mast">
   <div class="wrap mast-in">
-    <a class="brand" href="/" title="Back to akshitharamachandran.com"><b>Bake Archive</b><span id="brandSub">2019 &ndash; 2026</span></a>
+    <div class="brand"><a class="backhome" href="/" title="Back to akshitharamachandran.com">&larr;<span>Akshitha Ramachandran</span></a><a class="brand" href="/" style="display:contents"><b>Bake Archive</b><span id="brandSub">2019 &ndash; 2026</span></a></div>
     <div class="tabs" role="tablist" aria-label="Sections">
       <button class="tab" id="tabArchive" role="tab" aria-selected="true" aria-controls="viewArchive">Archive</button>
       <button class="tab" id="tabStudio" role="tab" aria-selected="false" aria-controls="viewStudio">Recipe Studio</button>
